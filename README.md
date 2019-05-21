@@ -4,5 +4,5 @@
 
 ### Name the images in incrementing numbers starting at 1 and put them in the images folder. 
 
-####Set for .png but script can be changed for jpg
+Set for .png but script can be changed for jpg
 
