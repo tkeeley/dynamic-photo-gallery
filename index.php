@@ -39,15 +39,16 @@
       @media only screen and (max-width: 650px) and (min-width: 481px) {
         /* Tablet view: 2 tiles */
         .box {
-          width: 50%;
+          width: 100%;
           padding-bottom: 50%;
+          /* height: auto; */
         }
       }
       @media only screen and (max-width: 1050px) and (min-width: 651px) {
         /* Small desktop / ipad view: 3 tiles */
         .box {
-          width: 33.3%;
-          padding-bottom: 33.3%;
+          width: 50%;
+          padding-bottom: 50%;
         }
       }
       @media only screen and (max-width: 1290px) and (min-width: 1051px) {
@@ -68,6 +69,11 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
     <!-- Add images from images folder -->
+
+    <!-- Count the Number of files in images folder and index -3 for hidden or system files -->
+    <!-- Change "images" to your image directory -->
+    <?php $count = count(scandir('images'))-3;?> 
+      
     <script>
       $(document).ready(function() {
         $(".wrap div").each(function(i) {
@@ -80,7 +86,7 @@
       });
 
       // Create divs for images
-      var n = 5; //number of divs to create
+      var n = "<?php echo $count ?>"; //number of divs to create using the $count var
       for (var i = 0; i < n; i++) {
         var div = document.createElement("div");
         document.getElementById("holder").appendChild(div);
