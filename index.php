@@ -75,6 +75,8 @@
     <?php $count = count(scandir('images'))-3;?> 
       
     <script>
+      
+     //Sets up the Div structure HTML
       $(document).ready(function() {
         $(".wrap div").each(function(i) {
           $(this).append(
